@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Andriy Lazaryev E-Portfolio">
+    <title>Jerysha Sterling Eportfolio</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="./assets/personal-logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="background">
+        <section id="landing-page" onmouseover="moveBackground(event)">
+            <nav>
+                <figure>
+                    <img src="./imgs/logo.png" alt="personal logo" id="personal-logo" />
+                </figure>
+                <ul class="nav__link--list">
+                    <li class="nav__link" onclick="toggleModal()">
+                        <button class="btn-effect nav__link--btn">About</button>
+                    </li>
+                    <li class="nav__link">
+                        <a href="#projects">
+                            <button class="btn-effect nav__link--btn">
+                                Projects
+                            </button>
+                        </a>
+                    </li>
+                    <li class="nav__link" onclick="toggleModal()">
+                        <button class="btn-effect nav__link--btn">
+                            Contact
+                        </button>
+                    </li>
+                    <li class="nav__link" onclick="toggleContrast()">
+                        <i class="fas fa-sun contrastIcon"></i>
+                    </li>
+                </ul>
+            </nav>
+            <header class="header">
+
+                <div class="header__content">
+                    <h1 class="title">Hey</h1>
+                    <h1 class="title yellow">I'm Jerysha</h1>
+                    <p class="header__para">
+                        I'm a
+                        <strong class="yellow">
+                            Frontend Developer
+                        </strong> with a strong passion for creating and testing interactive websites
+                        <br /> Here's a bit more
+                        <strong class="yellow click" onclick="toggleModal()">
+                            about me.
+                        </strong>
+                    </p>
+                </div>
+                <div class="header__links header__links--mobile">
+                    <a href="https://www.linkedin.com/in/jerysha-sterling-160a9320b" target="_blank" class="social__link click" name="social link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Jerysha" target="_blank" class="social__link click" name="social link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="./cv/RESUME.pdf" target="_blank" class="social__link click" name="social link">
+                        <i class="fas fa-file-pdf"></i>
+                    </a>
+                </div>
+            </header>
+
+            <div class="header__links">
+                <a href="https://www.linkedin.com/in/jerysha-sterling-160a9320b" target="_blank" class="social__link click" name="social link">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Jerysha" target="_blank" class="social__link click" name="social link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="./cv/RESUME.pdf" target="_blank" class="social__link click" name="social link">
+                    <i class="fas fa-file-pdf"></i>
+                </a>
+            </div>
+            <a href="#">
+                <button name="contact button" class="mail__btn click" onclick="toggleModal()">
+                  <i class="fas fa-envelope"></i>
+                </button>
+            </a>
+            <a href="#projects" class="scroll" name="scroll">
+                <div class="scroll__icon click"></div>
+            </a>
+            <div class="modal">
+                <div class="modal__half modal__about">
+                    <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
+                    <h4 class="modal__sub-title modal__sub-title--about">Frontend Developer.</h4>
+                    <p class="modal__para">
+                        I'm in my Final Year in ULCR <b class="yellow">Computer Systems Engineering</b> Student Who Is Interested In Frontend Development
+                        <br> I enjoy developing <b class="yellow">high-quality,
+                    performant</b> and <b class="yellow">responsive</b> websites with great user experiences. I Aspire To Become a <b class="yellow">React Developer</b>, Where I can be collaborating with a good team in a company that focuses on the continuous
+                        improvement of its employees and its objective on its customers or a <b class="yellow">Junior QA</b> where I will be testing, improving my skills and giving support where I am allowed surrounded by a good community in <b class="yellow">Tech Industry</b>.
+                    </p>
+                    <div class="modal__languages">
+                        <figure class="modal__language">
+                            <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png" alt="HTML Icon">
+                            <span class="language__name">HTML</span>
+                        </figure>
+                        <figure class="modal__language">
+                            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="CSS Icon">
+                            <span class="language__name">CSS</span>
+                        </figure>
+                        <figure class="modal__language">
+                            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="JavaScript Icon">
+                            <span class="language__name">JavaScript</span>
+                        </figure>
+                        <figure class="modal__language">
+                            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="React Icon">
+                            <span class="language__name">React</span>
+                        </figure>
+                    </div>
+                </div>
+                <div class="modal__half modal__contact">
+                    <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+                    <h3 class="modal__title modal__title--contact">
+                        Let's have a chat!
+                    </h3>
+                    <h3 class="modal__sub-title modal__sub-title--contact">
+                        I'm currently open to new opportunities.
+                    </h3>
+                    <form id="contact__form" onsubmit="contact(event)">
+                        <div class="form__item">
+                            <label class="form__item--label">Name</label>
+                            <input class="input" name="user_name" type="text" required></input>
+                        </div>
+                        <div class="form__item">
+                            <label class="form__item--label">Email</label>
+                            <input class="input" name="user_email" type="email" required></input>
+                        </div>
+                        <div class="form__item">
+                            <label class="form__item--label">Message</label>
+                            <textarea class="input" name="message" type="text" required></textarea>
+                        </div>
+                        <button id="contact__submit" class=" btn-effect nav__link--btn">
+                      Send it my way
+                    </button>
+                    </form>
+                    <div class="modal__overlay modal__overlay--loading">
+                        <i class="fas fa-spinner"></i>
+                    </div>
+                    <div class="modal__overlay modal__overlay--success">
+                        Thanks for the message! Looking forward to speaking to you soon.
+                    </div>
+                </div>
+            </div>
+            <img alt="background shape img" src="./imgs/cloud.svg" name="star" class="shape shape--0">
+            <img alt="background shape img" src="./imgs/cloud.svg" name="star" class="shape shape--1">
+            <img alt="background shape img" src="./imgs/cloud.svg" name="star" class="shape shape--2">
+            <img alt="background shape img" src="./imgs/cloud.svg" name="star" class="shape shape--3">
+            <img alt="background shape img" src="./imgs/cloud.svg" name="star" class="shape shape--4">
+            <img alt="background shape img" src="./imgs/cloud.svg" name="star" class="shape shape--5">
+        </section>
+        <section id="projects">
+            <div class="container">
+                <div class="row">
+                    <h1 class="section__title">
+                        Here are some of my <span class="yellow">projects</span>
+                    </h1>
+                    <ul class="project__list">
+                        <li class="project">
+                            <div class="project__wrapper">
+                                <img src="./imgs/DashboradImg.png" class="project__img" alt="">
+                                <div class="project__wrapper--bg"></div>
+                                <div class="project__description">
+                                    <h3 class="project__description--title">
+                                        Analytics Dashboard
+                                    </h3>
+                                    <h4 class="project__description--sub-title">
+                                        HTML, CSS, JAVASCRIPT
+                                    </h4>
+                                    <p class="project__description--para">
+                                        A responsive analytics dashboard, one of my big projects where I was able to see my improvement in CSS skills and one of the projects in which I was learning how to use JavaScript and where I tested the handling of objects and the use of the DOM.
+                                    </p>
+                                    <div class="project__description--links">
+                                        <a href="https://github.com/Jerysha/analytic-dashboard" target="_blank" class="project__description--link" name="project link">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                        <a href="https://js-dashboard-by-jerysha.netlify.app/" target="_blank" class="project__description--link" name="project link">
+                                            <i class="fas fa-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="project">
+                            <div class="project__wrapper">
+                                <img src="./imgs/ReactImg.png" class="project__img" alt="">
+                                <div class="project__wrapper--bg"></div>
+                                <div class="project__description">
+                                    <h3 class="project__description--title">
+                                        Restaurant Ecommerce
+                                    </h3>
+                                    <h4 class="project__description--sub-title">
+                                        HTML, CSS, JAVASCRIPT, REACT
+                                    </h4>
+                                    <p class="project__description--para">
+                                        My first attempt to create an ecommerce with react, I learned how useful and efficient it is to use React, as a frontend developer this library makes it easy to update web pages and manage the functionality of the page without having to rewrite the whole
+                                        page to add extra content.
+                                    </p>
+                                    <div class="project__description--links">
+                                        <a href="https://github.com/Jerysha" target="_blank" class="project__description--link" name="project link">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                        <a href="https://react-restaurant-ecommerce.netlify.app/" target="_blank" class="project__description--link" name="project link">
+                                            <i class="fas fa-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="project">
+                            <div class="project__wrapper">
+                                <img src="./imgs/weather_app.png" class="project__img" alt="">
+                                <div class="project__wrapper--bg"></div>
+                                <div class="project__description">
+                                    <h3 class="project__description--title">
+                                        Weather App With API
+                                    </h3>
+                                    <h4 class="project__description--sub-title">
+                                        HTML, CSS, JAVASCRIPT
+                                    </h4>
+                                    <p class="project__description--para">
+                                        Application where the weather is accessed using an API, something used to manage external content by making queries using JSON and fetch facilitation, in this project personally as a frontend developer is essential to know how to research and use the
+                                        documentations in order to improve projects and solve problems.
+                                    </p>
+                                    <div class="project__description--links">
+                                        <a href="https://github.com/Jerysha/weatherApp" target="_blank" class="project__description--link" name="project link">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                        <a href="https://weatherapp-jerysha.netlify.app/" target="_blank" class="project__description--link" name="project link">
+                                            <i class="fas fa-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="project">
+                            <div class="project__wrapper">
+                                <img src="./imgs/cameras_shop.png" class="project__img" alt="">
+                                <div class="project__wrapper--bg"></div>
+                                <div class="project__description">
+                                    <h3 class="project__description--title">
+                                        Cameras Ecommerce
+                                    </h3>
+                                    <h4 class="project__description--sub-title">
+                                        HTML, CSS, JAVASCRIPT, REACT
+                                    </h4>
+                                    <p class="project__description--para">
+                                        Cameras ecommerce with react router, hooks, API. Where I show my progress with everything I have learned about react and implementing my previous knowledge "JavaScript, CSS, HTML" to improve the quality of the website and code.
+                                    </p>
+                                    <div class="project__description--links">
+                                        <a href="https://github.com/Jerysha/react-cameras-ecommerce" target="_blank" class="project__description--link" name="project link">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                        <a href="https://react-cameras-ecommerce.netlify.app/" target="_blank" class="project__description--link" name="project link">
+                                            <i class="fas fa-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="row footer__row">
+                    <a href="#" class="footer__anchor">
+                        <figure class="footer__logo">
+                            <i class="fas fa-code footer__icon"> Frontend Developer</i>
+                            <i class="fas fa-code footer__icon"></i>
+                        </figure>
+                        <span class="footer__logo--popper">
+                    Top
+                    <i class="fas fa-arrow-up"></i>
+                  </span>
+                    </a>
+                    <div class="footer__social--list">
+                        <a name="footer link" href="https://github.com/Jerysha" class="
+                  footer__social--link
+                  link__hover-effect
+                  link__hover-effect--white
+                ">
+                    GitHub
+                  </a>
+                        <a name="footer link" href="https://www.linkedin.com/in/jerysha-sterling-160a9320b" target="_blank" class="
+                  footer__social--link
+                  link__hover-effect
+                  link__hover-effect--white
+                ">
+                    LinkedIn
+                  </a>
+                        <a name="footer link" href="#" onclick="toggleModal()" class="
+                  footer__social--link
+                  link__hover-effect
+                  link__hover-effect--white
+                ">
+                    Contact
+                  </a>
+                        <a name="footer link" href="./cv/RESUME.pdf" target="_blank" class="
+                  footer__social--link
+                  link__hover-effect
+                  link__hover-effect--white
+                ">
+                    Resume
+                  </a>
+                    </div>
+                    <div class="footer__copyright">Copyright &copy; 2022 Jerysha Sterling</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
